@@ -8,15 +8,8 @@ function loadList() {
   // var text = fetch("https://hdblcr.github.io/shipit/SDSAllStars.txt")
   //   .then( response => response.text());
   fetch("./SDSAllStars.txt")
-    // .then( function(response){
-    //   console.log(response.text());
-    //   // doThings(txt2list(response.text()));
-    // })
     .then(function(response){
-      // console.log("response.text");
-      // console.log(response.text());
       return response.text();
-      // doThings(txt2list(value));
     })
     .then(function(text) {
       doThings(txt2list(text));
@@ -27,20 +20,17 @@ function select() {
   loadList();
 }
 
-function doThings(characterList) {
-  var total = characterList.length;
-  var character1 = Math.floor(Math.random() * total);
-  do {
-    var character2 = Math.floor(Math.random() * total);
-  } while (character1 === character2);
+function doThings(list1, list2) {
+  var total1 = list1.length;
+  var c1 = Math.floor(Math.random() * total);
+  var total2 = list2.length;
+  var c1 = Math.floor(Math.random() * total);
+  // do {
+  //   var character2 = Math.floor(Math.random() * total);
+  // } while (character1 === character2);
 
-  var p = "<p>";
-  var toWrite = p.concat('', characterList[character1], ' and ', characterList[character2], '!</p>');
+  var p = "<p><b>";
+  var toWrite = p.concat('', list1[c1], '</b> and <b>', list2[c2], '</b>!</p>');
 
   document.getElementById("characters").innerHTML = toWrite;
-  // htmlnode.innerHTML('<p>');
-  // htmlnode.innerHTML(characterList[character1]);
-  // htmlnode.innerHTML(' and ');
-  // htmlnode.innerHTML(characterList[character2]);
-  // htmlnode.innerHTML('!</p>');
 }
