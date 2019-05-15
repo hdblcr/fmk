@@ -28,7 +28,7 @@ function loadMe() {
   // console.log("loaded??");
   // load lists
   loadList("./lists/SDSAllStars.txt");
-  loadList("./lists/characters.txt");
+  // loadList("./lists/characters.txt");
   loadList("./lists/MCU.txt");
 }
 
@@ -42,7 +42,7 @@ function doThings() {
   toWrite = "";
 
   list1 = sls[0];
-  list2 = sls[2];
+  list2 = sls[1];
 
   total1 = list1.length;
   c1 = Math.floor(Math.random() * total1);
