@@ -8,14 +8,16 @@
   <title>Ship It!</title>
 </head>
 <body>
-  <h1>Ship It!</h1>
+  <h1 onload="loadMe()">Ship It!</h1>
   <div>
     <p>Press the button and a pairing will be randomly generated.</p>
   </div>
-  <button onclick="select()">Generate a Pair!</button>
+  <button onclick="doThings()">Generate a Pair!</button>
+  <script type="text/javascript" src="./objects.js"></script>
   <script type="text/javascript" src="./functions.js"></script>
   <div id="characters">
   </div>
+  <div  onload="loadMe()" />
   <!--
   {# <div>
     <p>For extra fun, enter your friends or yourself to be possibly paired up!</p>
