@@ -1,5 +1,5 @@
 var sls = [];
-console.log("ive been called!!");
+// console.log("ive been called!!");
 loadMe();
 
 function txt2list(text) {
@@ -25,7 +25,7 @@ function loadList(file) {
 }
 
 function loadMe() {
-  console.log("loaded??");
+  // console.log("loaded??");
   // load lists
   loadList("./lists/SDSAllStars.txt");
   loadList("./lists/characters.txt");
@@ -51,10 +51,10 @@ function doThings() {
   do {
     c2 = Math.floor(Math.random() * total2);
   } while (list1.d[c1] === list2.d[c2]);
-  console.log(c1);
-  console.log(c2);
-  console.log(list1.d[c1]);
-  console.log(list2.d[c2]);
+  // console.log(c1);
+  // console.log(c2);
+  // console.log(list1.d[c1]);
+  // console.log(list2.d[c2]);
 
   p = "<p><b>";
   toWrite = p.concat('', list1.d[c1], '</b> and <b>', list2.d[c2], '</b>!</p>');
