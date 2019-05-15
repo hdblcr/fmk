@@ -3,7 +3,7 @@ var sls = [];
 loadMe();
 
 function txt2list(text) {
-  ary = text.split("\r\n");
+  ary = text.split("\n");
   sl = new ShipList(ary);
   sls.push(sl);
   // console.log(ary);
@@ -50,7 +50,7 @@ function doThings() {
   // c2 = Math.floor(Math.random() * total2);
   do {
     c2 = Math.floor(Math.random() * total2);
-  } while (list1.d[c1] === list2.d[c2]);
+  } while (list1.d[c1] == list2.d[c2]);
   // console.log(c1);
   // console.log(c2);
   // console.log(list1.d[c1]);
