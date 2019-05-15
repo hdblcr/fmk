@@ -27,9 +27,9 @@ function loadList(file) {
 function loadMe() {
   // console.log("loaded??");
   // load lists
-  loadList("./lists/SDSAllStars.txt");
+  loadList("https://hdblcr.github.io/shipit/lists/SDSAllStars.txt");
   // loadList("./lists/characters.txt");
-  loadList("./lists/MCU.txt");
+  loadList("https://hdblcr.github.io/shipit/lists/MCU.txt");
 }
 
 function doThings() {
