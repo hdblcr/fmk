@@ -15,11 +15,11 @@ function loadList(file) {
   //   .then( response => response.text());
   fetch(file)
     .then(function(response){
-      console.log("fetch response");
+      // console.log("fetch response");
       return response.text();
     })
     .then(function(text) {
-      console.log("text");
+      // console.log("text");
       txt2list(text);
     });
 }
