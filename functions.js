@@ -28,11 +28,12 @@ function loadMe() {
   // console.log("loaded??");
   // load lists
   loadList("https://hdblcr.github.io/shipit/lists/SDSAllStars.txt");
-  // loadList("./lists/characters.txt");
   loadList("https://hdblcr.github.io/shipit/lists/MCU.txt");
+  loadList("https://hdblcr.github.io/shipit/lists/characters.txt");
+  loadList("https://hdblcr.github.io/shipit/lists/realLifeFriends.txt");
 }
 
-function doThings() {
+function doThings(l1, l2) {
   // loadMe();
   var total1 = 1,
   total2 = 1,
@@ -41,8 +42,8 @@ function doThings() {
   p = "",
   toWrite = "";
 
-  list1 = sls[0];
-  list2 = sls[1];
+  list1 = sls[l1];
+  list2 = sls[l2];
 
   total1 = list1.length;
   c1 = Math.floor(Math.random() * total1);
