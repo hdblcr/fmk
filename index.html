@@ -12,11 +12,15 @@
   <div>
     <p>Press the button and a pairing will be randomly generated.</p>
   </div>
-  <button onclick="doThings()">Generate a Pair!</button>
+  <button onclick="doThings(0, 1)">Generate a Pair!</button>
   <script type="text/javascript" src="./objects.js"></script>
   <script type="text/javascript" src="./functions.js"></script>
   <div id="characters">
   </div>
+  <map name="primary">
+    <area shape="rectangle" coords="350,350" onclick="doThings(2, 3)">
+  </map>
+  <img usemap="primary"
 
   <!--
   <div  onload="loadMe()" />

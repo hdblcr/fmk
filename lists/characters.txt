@@ -1,5 +1,4 @@
-Personalized List
-Snow White
+Personalized Character List
 Mulan
 Dopey (from Snow White)
 Zeus
@@ -7,4 +6,71 @@ Hercules
 Hera
 Athena
 Harry Potter
-Cinderella
+Malfoy (Harry Potter)
+Hagrid (Harry Potter)
+Prof. McGonigal (Harry Potter)
+Belatrix LeStrange (Harry Potter)
+Snape (Harry Potter)
+Goofy
+Scrooge McDuck
+Tinker Bell
+Peter Pan
+Wendy
+Captain Hook
+Alice in Wonderland
+Cheshire Cat
+Kuzco as a Llama (Emperor's New Groove)
+Yzma (Emperor's New Groove)
+Kronk (Emperor's New Groove)
+Pacha (Emperor's New Groove)
+Fairy Godmother
+Pinocchio
+Jiminy Cricket
+Meeko (Pocahontas)
+Baloo (Jungle Book)
+Bagheera (Jungle Book)
+Shere Khan (Jungle Book)
+Robin Hood the Fox
+Cruella DeVil
+Eeyore
+Tigger
+Mushu (Mulan)
+Gaston (Beauty and the Beast)
+Aladdin
+Jasmine
+Genie (Aladdin)
+Jafar
+Abu (Aladdin)
+Quasimodo
+Stitch
+Ariel
+Ursula
+Simba
+Timon
+Pumbaa
+Scar
+WALL-E
+Crush (Finding Nemo)
+Dug (Up)
+Kevin (Up)
+Edna Mode (The Incredibles)
+Woody (Toy Story)
+Batman
+Buffy
+Xander (Buffy)
+Giles (Buffy)
+Willow (Buffy)
+Eleanor (The Good Place)
+BB-8
+Captain Jack Sparrow
+Dwight (The Office)
+Elmo
+Sheldon Cooper
+Spock
+Barney Stinson
+Ron Swanson
+Betty White
+Yoshi
+Mario
+Bowser
+Princess Peach
