@@ -74,3 +74,6 @@ Yoshi
 Mario
 Bowser
 Princess Peach
+Fezzik
+Princess Buttercup
+Inigo Montoya

@@ -15,6 +15,7 @@ class ShipList {
     this.d.pop();
     this.rmEmpty();
     this.length = this.d.length;
+    this.id = sls.length;
     // shipLists.add(this);
   }
   rmEmpty() {
