@@ -24,12 +24,12 @@ function loadList(file) {
 
 function addOptions() {
   console.log("inside add options");
-  console.log(sls.length);
-  if (sls.length === 0) {
-    console.log("reloading lists");
-    loadLists();
-    console.log(sls.length);
-  }
+  console.log(sls);
+  // if (sls.length == 0) {
+  //   console.log("reloading lists");
+  //   loadLists();
+  //   console.log(sls.length);
+  // }
   var sl, opt1, opt2;
   var sel1 = document.getElementById("listSelect1");
   var sel2 = document.getElementById("listSelect2");
