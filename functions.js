@@ -57,6 +57,7 @@ function addOptions() {
 function loadMe() {
   loadLists();
   fetchOptions();
+  doThings();
 }
 
 function loadLists() {
@@ -81,8 +82,6 @@ function doThings() {
 
   list1 = sls[l1];
   list2 = sls[l2];
-  console.log(list1.title);
-  console.log(list2.title);
 
   total1 = list1.length;
   c1 = Math.floor(Math.random() * total1);
@@ -91,8 +90,8 @@ function doThings() {
     c2 = Math.floor(Math.random() * total2);
   } while (list1.d[c1] == list2.d[c2]);
 
-  p = "<p><b>";
-  toWrite = p.concat('', list1.d[c1], '</b> and <b>', list2.d[c2], '</b>!</p>');
+  p = "<h3>";
+  toWrite = p.concat('', list1.d[c1], ' and ', list2.d[c2], '!</h3>');
 
   document.getElementById("characters").innerHTML = toWrite;
 }
