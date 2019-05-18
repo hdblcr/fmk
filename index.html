@@ -2,30 +2,28 @@
 <meta charset="utf-8">
 <html>
 <head profile="http://www.w3.org/2005/10/profile">
-  <link rel="stylesheet" href="./overall_style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./overall_style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <title>Ship It!</title>
 </head>
 <body>
-  <h1 onload="loadMe()">Ship It!</h1>
+  <h1>Ship It!</h1>
   <div>
     <p> Choose your lists!</p>
   </div>
-  <select id="listSelect1">
+  <div id="selections"></div>
+  <!-- <select id="listSelect1">
   </select>
   <select id="listSelect2">
-  </select>
+  </select> -->
   <div>
     <p>Press the button and a pairing will be randomly generated.</p>
   </div>
   <button onclick="doThings()">Generate a Pair!</button>
   <script type="text/javascript" src="./objects.js"></script>
   <script type="text/javascript" src="./functions.js"></script>
-  <div id="characters">
+  <div id="characters" onload="loadMe()">
   </div>
-  <map name="primary">
-    <area shape="rect" coords="0,0,350,350" onclick="doThings(2, 3)">
-  </map>
 </body>
 </html>
