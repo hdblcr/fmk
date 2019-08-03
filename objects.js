@@ -35,4 +35,7 @@ class ShipList {
       this.add(names[i]);
     }
   }
+  push(ary) {
+    this.d = this.d.push(ary);
+  }
 }
