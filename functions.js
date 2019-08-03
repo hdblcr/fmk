@@ -20,6 +20,7 @@ function loadList(file) {
 }
 
 function fetchList() {
+  console.log("what happened??");
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if(this.readyState == 4 && this.status == 200) {
