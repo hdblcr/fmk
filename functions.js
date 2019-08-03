@@ -1,4 +1,4 @@
-// var sls = {};
+var sls = {};
 // console.log("ive been called!!");
 // fetchList();
 // loadMe();
