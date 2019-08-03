@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head profile="http://www.w3.org/2005/10/profile">
+  <link rel="stylesheet" href="./overall_style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <title>FMK</title>
+</head>
+<body>
+  <h1>F***, Marry, Kill!</h1>
+  <h2>Current character list:</h2>
+  <div>
+    <div id="list"></div>
+  </div>
+  <form name="myForm" method="get" onsubmit="return addChar()">
+    Character to add: <br />
+    <input type="text" name = "character">
+    <input type="submit" value ="Add character to list!"
+  </form>
+  <script type="text/javascript" src="./objects.js"></script>
+  <script type="text/javascript" src="./functions.js"></script>
+  <div id="characters" onload="fetchList()">
+  </div>
+</body>
+</html>

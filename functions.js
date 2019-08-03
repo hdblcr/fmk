@@ -114,3 +114,11 @@ function doThings() {
 
   document.getElementById("characters").innerHTML = toWrite;
 }
+
+
+function addChar() {
+  var name = document.forms["myForm"]["character"].value;
+  var list = sls[0];
+  list.add(name);
+  writeToFile();
+}
