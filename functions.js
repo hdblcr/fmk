@@ -82,49 +82,35 @@ function loadMe() {
 }
 
 function loadLists() {
-  loadList("https://hdblcr.github.io/fmk/lists/SDSAllStars.txt");
-  loadList("https://hdblcr.github.io/fmk/lists/MCU.txt");
+  // loadList("https://hdblcr.github.io/fmk/lists/SDSAllStars.txt");
+  // loadList("https://hdblcr.github.io/fmk/lists/MCU.txt");
   loadList("https://hdblcr.github.io/fmk/lists/characters.txt");
-  loadList("https://hdblcr.github.io/fmk/lists/realLifeFriends.txt");
+  // loadList("https://hdblcr.github.io/fmk/lists/realLifeFriends.txt");
 }
 
 function doThings() {
-  var total1 = 1,
-  total2 = 1,
-  total3 = 1,
+  var total = 1,
   c1 = 0,
   c2 = 0,
   c3 = 0,
-  p = "",
-  toWrite = "",
-  l1 = 0,
-  l2 = 1,
-  l3 = 2;
+  p = "<h3>",
+  toWrite = "";
 
-  l1 = document.getElementById("listSelect1").selectedIndex;
-  l2 = document.getElementById("listSelect2").selectedIndex;
-  l3 = document.getElementById("listSelect3").selectedIndex;
+  var charList = sls[0];
 
-  list1 = sls[l1];
-  list2 = sls[l2];
-  list3 = sls[l3];
-
-  total1 = list1.length;
-  c1 = Math.floor(Math.random() * total1);
-  total2 = list2.length;
-  total3 = list3.length;
+  total = charList.length;
+  c1 = Math.floor(Math.random() * total);
   do {
-    c2 = Math.floor(Math.random() * total2);
-  } while (list1.d[c1] == list2.d[c2]);
+    c2 = Math.floor(Math.random() * total);
+  } while (c1 == c2);
 
   do {
     do {
-      c3 = Math.floor(Math.random() * total3);
-    } while (list1.d[c2] == list2.d[c3]);
-  } while (list1.d[c1] == list2.d[c3]);
+      c3 = Math.floor(Math.random() * total);
+    } while (c2 == c3);
+  } while (c1 == c3);
 
-  p = "<h3>";
-  toWrite = p.concat('', list1.d[c1], ', ', list2.d[c2], ', and ', list3.d[c3], '!</h3>');
+  toWrite = p.concat('', charList.d[c1], ', ', charList.d[c2], ', and ', charList.d[c3], '!</h3>');
 
   document.getElementById("characters").innerHTML = toWrite;
 }
