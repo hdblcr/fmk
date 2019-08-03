@@ -1,12 +1,12 @@
-var sls = {};
+var sls = new ShipList;
 console.log("ive been called!!");
 fetchList();
 // loadMe();
 
 function txt2list(text) {
   ary = text.split("\n");
-  sl = new ShipList(ary);
-  sls.push(sl);
+  // sl = new ShipList(ary);
+  sls.adds(ary);
 }
 
 function loadList(file) {
