@@ -1,5 +1,6 @@
 var sls = [];
 console.log("ive been called!!");
+fetchList();
 // loadMe();
 
 function txt2list(text) {
@@ -24,7 +25,7 @@ function loadList(file) {
 
 function fetchList() {
   console.log("tesitnnnnnnnnnnnn");
-  var xhttp = new XMLHttpRequest;
+  var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if(this.readyState == 4 && this.status == 200) {
       fetchCharacters();
@@ -35,25 +36,27 @@ function fetchList() {
 }
 
 function fetchCharacters() {
+  console.log("got to fetchCharacters");
+  console.log(sls);
   loadList("https://hdblcr.github.io/fmk/lists/characters.txt");
   var doc = document.getElementById("list");
-  for (sl in sls[0]) {
+  for (sl in sls[0].d) {
     console.log(sl);
     var item = document.createElement("li");
-    var textnode = document.createTextNode(sls[0][sl].title);
+    var textnode = document.createTextNode(sl);
     item.appendChild(textnode);
     doc.appendChild(item);
   }
 }
 
 function fetchOptions() {
-  var xhttp = new XMLHttpRequest;
+  var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if(this.readyState == 4 && this.status == 200) {
       addOptions();
     }
   };
-  xhttp.open("GET", "https://hdblcr.github.io/fmk/", true);
+  xhttp.open("GET", "https://hdblcr.github.io/fmk/lists", true);
   xhttp.send();
 }
 
