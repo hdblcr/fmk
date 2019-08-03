@@ -13,6 +13,7 @@ class ShipList {
     this.d = arrayFromFile;
     this.d.shift();
     this.d.pop();
+    this.d.push();
     this.rmEmpty();
     this.length = this.d.length;
     this.id = sls.length;
@@ -35,7 +36,7 @@ class ShipList {
       this.add(names[i]);
     }
   }
-  push(ary) {
-    this.d = this.d.push(ary);
-  }
+  // push(ary) {
+  //   this.d = this.d.push(ary);
+  // }
 }
