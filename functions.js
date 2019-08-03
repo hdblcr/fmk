@@ -1,6 +1,6 @@
 var sls = [];
 console.log("ive been called!!");
-loadMe();
+// loadMe();
 
 function txt2list(text) {
   ary = text.split("\n");
@@ -38,6 +38,7 @@ function fetchCharacters() {
   loadList("https://hdblcr.github.io/fmk/lists/characters.txt");
   var doc = document.getElementById("list");
   for (sl in sls[0]) {
+    console.log(sl);
     var item = document.createElement("li");
     var textnode = document.createTextNode(sls[0][sl].title);
     item.appendChild(textnode);
