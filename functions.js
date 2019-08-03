@@ -92,9 +92,9 @@ function selectCharacters() {
   p = "<h3>",
   toWrite = "";
 
-  var charList = sls;
+  // var charList = sls[0];
 
-  total = charList.length;
+  total = sls.length;
   c1 = Math.floor(Math.random() * total);
   do {
     c2 = Math.floor(Math.random() * total);
@@ -106,7 +106,7 @@ function selectCharacters() {
     } while (c2 == c3);
   } while (c1 == c3);
 
-  toWrite = p.concat('', charList.d[c1], ', ', charList.d[c2], ', and ', charList.d[c3], '!</h3>');
+  toWrite = p.concat('', sls.d[c1], ', ', sls.d[c2], ', and ', sls.d[c3], '!</h3>');
 
   document.getElementById("characters").innerHTML = toWrite;
 }
@@ -114,7 +114,6 @@ function selectCharacters() {
 
 function addChar() {
   var name = document.forms["myForm"]["character"].value;
-  var list = sls[0];
-  list.add(name);
-  writeToFile();
+  sls.add(name);
+  // writeToFile();
 }
