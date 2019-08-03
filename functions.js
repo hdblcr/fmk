@@ -1,4 +1,4 @@
-var sls = [];
+var sls = {};
 console.log("ive been called!!");
 fetchList();
 // loadMe();
@@ -39,8 +39,8 @@ function fetchCharacters() {
   console.log("got to fetchCharacters");
   loadList("https://hdblcr.github.io/fmk/lists/characters.txt");
   var doc = document.getElementById("list");
-  console.log(sls.d);
-  console.log(sls);
+  console.log("sls.d", sls.d);
+  console.log("sls", sls);
   for (sl in sls.d) {
     console.log(sl);
     var item = document.createElement("li");
