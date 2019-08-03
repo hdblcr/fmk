@@ -38,6 +38,8 @@ function fetchList() {
 function fetchCharacters() {
   console.log("got to fetchCharacters");
   console.log(sls);
+  console.log(sls.d);
+  console.log(sls[0].d);
   loadList("https://hdblcr.github.io/fmk/lists/characters.txt");
   var doc = document.getElementById("list");
   for (sl in sls[0].d) {
