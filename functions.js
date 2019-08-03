@@ -1,6 +1,6 @@
 // var sls = {};
-console.log("ive been called!!");
-fetchList();
+// console.log("ive been called!!");
+// fetchList();
 // loadMe();
 
 function txt2list(text) {
@@ -10,21 +10,16 @@ function txt2list(text) {
 }
 
 function loadList(file) {
-  // var text = fetch("https://hdblcr.github.io/shipit/SDSAllStars.txt")
-  //   .then( response => response.text());
   fetch(file)
     .then(function(response){
-      // console.log("fetch response");
       return response.text();
     })
     .then(function(text) {
-      // console.log("text");
       txt2list(text);
     });
 }
 
 function fetchList() {
-  console.log("tesitnnnnnnnnnnnn");
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if(this.readyState == 4 && this.status == 200) {
@@ -39,11 +34,9 @@ function fetchCharacters() {
   console.log("got to fetchCharacters");
   loadList("https://hdblcr.github.io/fmk/lists/characters.txt");
   var doc = document.getElementById("list");
-  console.log("sls.d");
-  console.log(sls.d);
   console.log("sls");
   console.log(sls);
-  for (sl in sls.d) {
+  for (sl in sls) {
     console.log(sl);
     var item = document.createElement("li");
     var textnode = document.createTextNode(sl);
