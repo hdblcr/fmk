@@ -37,9 +37,10 @@ function fetchList() {
 function fetchCharacters() {
   loadList("https://hdblcr.github.io/fmk/lists/characters.txt");
   var doc = document.getElementById("list");
-  for (sl in sls) {
+  for (sl in sls[0]) {
     var item = document.createElement("li");
-    item.text = sls[sl].title;
+    var textnode = document.createTextNode(sls[0][sl].title);
+    item.appendChild(textnode);
     doc.appendChild(item);
   }
 }
