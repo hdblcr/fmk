@@ -42,7 +42,7 @@ function fetchCharacters() {
   // console.log(sls.d);
   // console.log(sls[0].d);
   var doc = document.getElementById("list");
-  for (sl in sls[0].d) {
+  for (sl in sls.d) {
     console.log(sl);
     var item = document.createElement("li");
     var textnode = document.createTextNode(sl);
