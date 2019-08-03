@@ -79,19 +79,12 @@ function addOptions() {
 }
 
 function loadMe() {
-  loadLists();
-  // fetchOptions();
-  doThings();
-}
-
-function loadLists() {
-  // loadList("https://hdblcr.github.io/fmk/lists/SDSAllStars.txt");
-  // loadList("https://hdblcr.github.io/fmk/lists/MCU.txt");
   loadList("https://hdblcr.github.io/fmk/lists/characters.txt");
-  // loadList("https://hdblcr.github.io/fmk/lists/realLifeFriends.txt");
+  selectCharacters();
 }
 
-function doThings() {
+
+function selectCharacters() {
   var total = 1,
   c1 = 0,
   c2 = 0,
@@ -99,7 +92,7 @@ function doThings() {
   p = "<h3>",
   toWrite = "";
 
-  var charList = sls[0];
+  var charList = sls;
 
   total = charList.length;
   c1 = Math.floor(Math.random() * total);
