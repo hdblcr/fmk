@@ -113,7 +113,7 @@ function chooseCharacters() {
   p = "<h3>",
   toWrite = "";
 
-  // var charList = sls[0];
+  var charList = sls[0];
 
   total = sls.length;
   c1 = Math.floor(Math.random() * total);
