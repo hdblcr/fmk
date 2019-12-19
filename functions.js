@@ -113,7 +113,7 @@ function chooseCharacters() {
   p = "<h3>",
   toWrite = "";
 
-  console.log("about to write charList")";
+  console.log("about to write charList");
   console.log("sls[0]: ");
   console.log(sls[0]);
   var charList = sls[0];
