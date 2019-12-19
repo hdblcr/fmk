@@ -5,18 +5,22 @@ loadMe();
 
 // convert from file to array of characters
 function txt2list(text) {
+  console.log("txt2list");
   ary = text.split("\n");
   sls = new ShipList(ary);
+  console.log(sls);
   // sls.adds(ary);
 }
 
 function loadList(file) {
+  console.log("load list");
   // var text = fetch("https://hdblcr.github.io/shipit/SDSAllStars.txt")
   //   .then( response => response.text());
 
   fetch(file)
     .then(function(response){
       console.log("fetch response");
+      console.log(response.text());
       txt2list(response.text());
     })
     // .then(function(text) {
@@ -26,7 +30,7 @@ function loadList(file) {
 }
 
 function fetchList() {
-  console.log("what happened??");
+  console.log("fetch list");
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if(this.readyState == 4 && this.status == 200) {
@@ -38,6 +42,7 @@ function fetchList() {
 }
 
 function fetchCharacters() {
+  console.log("fetch characters");
   loadLists();
   var doc = document.getElementById("list");
   console.log("sls");
@@ -51,6 +56,7 @@ function fetchCharacters() {
 }
 
 function fetchOptions() {
+  console.log("fetch options");
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if(this.readyState == 4 && this.status == 200) {
@@ -62,6 +68,7 @@ function fetchOptions() {
 }
 
 function addOptions() {
+  console.log("I shouldn't be called");
   var sl, opt1, opt2;
   var doc = document.getElementById("selections");
   var sel1 = document.createElement("select");
@@ -83,13 +90,14 @@ function addOptions() {
 }
 
 function loadMe() {
-  console.log("load me!")
+  console.log("load me!");
   loadLists();
   // fetchOptions();
   chooseCharacters();
 }
 
 function loadLists() {
+  console.log("load lists");
   // loadList("https://hdblcr.github.io/fmk/lists/SDSAllStars.txt");
   // loadList("https://hdblcr.github.io/fmk/lists/MCU.txt");
   loadList("https://hdblcr.github.io/fmk/lists/characters.txt");
@@ -97,6 +105,7 @@ function loadLists() {
 }
 
 function chooseCharacters() {
+  console.log("choose characters");
   var total = 1,
   c1 = 0,
   c2 = 0,
