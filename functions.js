@@ -15,7 +15,7 @@ function loadList(file) {
 
   fetch(file)
     .then(function(response){
-      // console.log("fetch response");
+      console.log("fetch response");
       txt2list(response.text());
     })
     // .then(function(text) {
@@ -80,7 +80,7 @@ function addOptions() {
 function loadMe() {
   loadLists();
   // fetchOptions();
-  doThings();
+  chooseCharacters();
 }
 
 function loadLists() {
@@ -90,7 +90,7 @@ function loadLists() {
   // loadList("https://hdblcr.github.io/fmk/lists/realLifeFriends.txt");
 }
 
-function doThings() {
+function chooseCharacters() {
   var total = 1,
   c1 = 0,
   c2 = 0,
@@ -112,7 +112,7 @@ function doThings() {
     } while (c2 == c3);
   } while (c1 == c3);
 
-  toWrite = p.concat('', charList.d[c1], ', ', charList.d[c2], ', and ', charList.d[c3], '!</h3>');
+  toWrite = p.concat('', charList[c1], ', ', charList[c2], ', and ', charList[c3], '!</h3>');
 
   document.getElementById("characters").innerHTML = toWrite;
 }
