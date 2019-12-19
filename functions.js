@@ -113,9 +113,15 @@ function chooseCharacters() {
   p = "<h3>",
   toWrite = "";
 
+  console.log("about to write charList")";
+  console.log("sls[0]: ");
+  console.log(sls[0]);
   var charList = sls[0];
+  console.log(charList);
 
   total = sls.length;
+  console.log(total);
+  console.log("hunch: ", charList.length);
   c1 = Math.floor(Math.random() * total);
   do {
     c2 = Math.floor(Math.random() * total);
