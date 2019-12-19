@@ -2,6 +2,7 @@ var sls = [];
 console.log("ive been called!!");
 loadMe();
 
+// convert from file to array of characters
 function txt2list(text) {
   ary = text.split("\n");
   sl = new ShipList(ary);
@@ -11,15 +12,16 @@ function txt2list(text) {
 function loadList(file) {
   // var text = fetch("https://hdblcr.github.io/shipit/SDSAllStars.txt")
   //   .then( response => response.text());
+
   fetch(file)
     .then(function(response){
       // console.log("fetch response");
-      return response.text();
+      txt2list(response.text());
     })
-    .then(function(text) {
-      // console.log("text");
-      txt2list(text);
-    });
+    // .then(function(text) {
+    //   // console.log("text");
+    //   txt2list(text);
+    // });
 }
 
 function fetchList() {
@@ -34,7 +36,7 @@ function fetchList() {
 }
 
 function fetchCharacters() {
-  loadList("https://hdblcr.github.io/fmk/lists/characters.txt");
+  loadLists();
   var doc = document.getElementById("list");
   for (sl in sls) {
     var item = document.createElement("li");
