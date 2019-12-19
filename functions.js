@@ -1,7 +1,7 @@
 var sls = {};
-// console.log("ive been called!!");
+console.log("ive been called!!");
 // fetchList();
-// loadMe();
+loadMe();
 
 // convert from file to array of characters
 function txt2list(text) {
@@ -11,15 +11,6 @@ function txt2list(text) {
 }
 
 function loadList(file) {
-<<<<<<< HEAD
-  fetch(file)
-    .then(function(response){
-      return response.text();
-    })
-    .then(function(text) {
-      txt2list(text);
-    });
-=======
   // var text = fetch("https://hdblcr.github.io/shipit/SDSAllStars.txt")
   //   .then( response => response.text());
 
@@ -32,7 +23,6 @@ function loadList(file) {
     //   // console.log("text");
     //   txt2list(text);
     // });
->>>>>>> fmk
 }
 
 function fetchList() {
@@ -48,24 +38,14 @@ function fetchList() {
 }
 
 function fetchCharacters() {
-<<<<<<< HEAD
-  console.log("got to fetchCharacters");
-  loadList("https://hdblcr.github.io/fmk/lists/characters.txt");
-=======
   loadLists();
->>>>>>> fmk
   var doc = document.getElementById("list");
   console.log("sls");
   console.log(sls);
   for (sl in sls) {
     console.log(sl);
     var item = document.createElement("li");
-<<<<<<< HEAD
-    var textnode = document.createTextNode(sl);
-    item.appendChild(textnode);
-=======
     item.text = sls[sl].title; // should probably be sl.title
->>>>>>> fmk
     doc.appendChild(item);
   }
 }
@@ -103,8 +83,6 @@ function addOptions() {
 }
 
 function loadMe() {
-<<<<<<< HEAD
-=======
   loadLists();
   // fetchOptions();
   chooseCharacters();
@@ -113,17 +91,11 @@ function loadMe() {
 function loadLists() {
   // loadList("https://hdblcr.github.io/fmk/lists/SDSAllStars.txt");
   // loadList("https://hdblcr.github.io/fmk/lists/MCU.txt");
->>>>>>> fmk
   loadList("https://hdblcr.github.io/fmk/lists/characters.txt");
   selectCharacters();
 }
 
-<<<<<<< HEAD
-
-function selectCharacters() {
-=======
 function chooseCharacters() {
->>>>>>> fmk
   var total = 1,
   c1 = 0,
   c2 = 0,
@@ -145,11 +117,7 @@ function chooseCharacters() {
     } while (c2 == c3);
   } while (c1 == c3);
 
-<<<<<<< HEAD
-  toWrite = p.concat('', sls.d[c1], ', ', sls.d[c2], ', and ', sls.d[c3], '!</h3>');
-=======
   toWrite = p.concat('', charList[c1], ', ', charList[c2], ', and ', charList[c3], '!</h3>');
->>>>>>> fmk
 
   document.getElementById("characters").innerHTML = toWrite;
 }
