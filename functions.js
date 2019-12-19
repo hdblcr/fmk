@@ -20,7 +20,7 @@ function loadList(file) {
   fetch(file)
     .then(function(response){
       console.log("fetch response");
-      console.log(response.text());
+      // console.log(response.text());
       txt2list(response.text());
     })
     // .then(function(text) {
@@ -127,7 +127,7 @@ function chooseCharacters() {
     } while (c2 == c3);
   } while (c1 == c3);
 
-  toWrite = p.concat('', charList[c1], ', ', charList[c2], ', and ', charList[c3], '!</h3>');
+  toWrite = p.concat('', charList.d[c1], ', ', charList.d[c2], ', and ', charList.d[c3], '!</h3>');
 
   document.getElementById("characters").innerHTML = toWrite;
 }
