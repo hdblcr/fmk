@@ -40,7 +40,7 @@ function fetchCharacters() {
   var doc = document.getElementById("list");
   for (sl in sls) {
     var item = document.createElement("li");
-    item.text = sls[sl].title;
+    item.text = sls[sl].title; // should probably be sl.title
     doc.appendChild(item);
   }
 }
