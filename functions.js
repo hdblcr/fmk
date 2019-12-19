@@ -83,6 +83,7 @@ function addOptions() {
 }
 
 function loadMe() {
+  console.log("load me!")
   loadLists();
   // fetchOptions();
   chooseCharacters();
@@ -92,7 +93,7 @@ function loadLists() {
   // loadList("https://hdblcr.github.io/fmk/lists/SDSAllStars.txt");
   // loadList("https://hdblcr.github.io/fmk/lists/MCU.txt");
   loadList("https://hdblcr.github.io/fmk/lists/characters.txt");
-  selectCharacters();
+  // chooseCharacters();
 }
 
 function chooseCharacters() {
