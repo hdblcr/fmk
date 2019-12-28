@@ -4,7 +4,7 @@ var sls = new Array();
 console.log("ive been called!!");
 
 
-// ============================== ShipList class =====================================
+// ============================== class =====================================
 
 class ShipList {
   constructor(arrayFromFile) {
@@ -14,7 +14,6 @@ class ShipList {
     this.d.pop();
     this.rmEmpty();
     this.length = this.d.length;
-    this.ary = this.d;
     // this.id = sls.length;
     // shipLists.add(this);
   }
@@ -35,123 +34,62 @@ class ShipList {
       this.add(names[i]);
     }
   }
+  // push(ary) {
+  //   this.d = this.d.push(ary);
+  // }
 }
 
 
 // ================================ functions =====================================
 
 
-// ================================ Shipples class ================================
-
-class Shipples {
-  constructor (){
-    this.d = [];
-    this.size = this.d.length;
-    this.numLists = this.length;
-  }
-
-  add (sl) {
-    this.d.push(sl);
-  }
-
-  list(num) {
-    return this.d[num].ary;
-  }
-
-  loadLists() {
-    console.log("load lists");
-    this.loadList("./lists/characters.txt");
-  }
-
-  loadList(file) {
-    console.log("load list");
-    var data = this.fetch(file);
-  }
-
-  fetch(file) {
-    console.log("fetch");
-    const fs = require('fs');
-    try {
-      const data = fs.readFileSync(file);
-      this.txt2list(data.toString());
-    } catch (err) {
-      console.error(err);
-    }
-  }
-
-  // convert from file to array of characters
-  txt2list(text) {
-    console.log("txt2list");
-    var ary = text.split("\n");
-    var sl = new ShipList(ary);
-    this.add(sl);
-    console.log(this);
-  }
+// convert from file to array of characters
+function txt2list(text) {
+  console.log("txt2list");
+  // console.log(text);
+  ary = text.split("\n");
+  sl = new ShipList(ary);
+  sls.push(sl);
+  console.log(sls);
+  // sls.adds(ary);
 }
 
-function loadMe() {
-  console.log("load me!");
-  sls = new Shipples;
-  sls.loadLists();
-  // fetchOptions();
-  chooseCharacters(sls);
+function fetch(file) {
+  console.log("fetch");
+  const fs = require('fs');
+  try {
+    const data = fs.readFileSync(file);
+    // console.log(data.toString());
+    txt2list(data.toString());
+  } catch (err) {
+    console.error(err);
+  }
+  // fs.readFile(file, function (err, data) {
+  //   console.log("reading file");
+  //   if(err) throw err;
+  //   console.error(err);
+  //   console.log(data.toString());
+  //   txt2list(data.toString());
+  // });
 }
 
-function chooseCharacters(sls) {
-  console.log("choose characters");
-  var total = 1,
-  c1 = 0,
-  c2 = 0,
-  c3 = 0,
-  p = "<h3>",
-  toWrite = "";
+function loadList(file) {
+  console.log("load list");
+  // var text = fetch("https://hdblcr.github.io/shipit/SDSAllStars.txt")
+  //   .then( response => response.text());
 
-  console.log("about to write charList");
-  console.log("sls[0]: ");
-  console.log(sls.list(0));
-  var charList = [];
-  var i = 0;
-  do {
-    charList = charList.concat(sls.list(i));
-    i++;
-  } while (i < sls.numLists);
-  console.log(charList);
-
-  total = charList.length;
-  console.log(total);
-  console.log("hunch: ", charList.length);
-  c1 = Math.floor(Math.random() * total);
-  do {
-    c2 = Math.floor(Math.random() * total);
-  } while (c1 == c2);
-
-  do {
-    do {
-      c3 = Math.floor(Math.random() * total);
-    } while (c2 == c3);
-  } while (c1 == c3);
-
-  var toWrite = p.concat('', charList[c1], ', ', charList[c2], ', and ', charList[c3], '!</h3>');
-
-  document.getElementById("characters").innerHTML = toWrite;
+  data = fetch(file);
+  // txt2list(data);
+    // .then(function(response){
+    //   console.log("fetch response");
+    //   // console.log(response.text());
+    //   txt2list(response.text());
+    // })
+    // .then(function(text) {
+    //   // console.log("text");
+    //   txt2list(text);
+    // });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function fetchList(file) {
   console.log("fetch list");
@@ -213,6 +151,55 @@ function addOptions() {
   doc.appendChild(sel2);
 }
 
+function loadMe() {
+  console.log("load me!");
+  loadLists();
+  // fetchOptions();
+  chooseCharacters();
+}
+
+function loadLists() {
+  console.log("load lists");
+  // loadList("https://hdblcr.github.io/fmk/lists/SDSAllStars.txt");
+  // loadList("https://hdblcr.github.io/fmk/lists/MCU.txt");
+  // loadList("https://hdblcr.github.io/fmk/lists/characters.txt");
+  loadList("./lists/characters.txt");
+  // chooseCharacters();
+}
+
+function chooseCharacters() {
+  console.log("choose characters");
+  var total = 1,
+  c1 = 0,
+  c2 = 0,
+  c3 = 0,
+  p = "<h3>",
+  toWrite = "";
+
+  console.log("about to write charList");
+  console.log("sls[0]: ");
+  console.log(sls[0]);
+  var charList = sls[0];
+  console.log(charList);
+
+  total = sls.length;
+  console.log(total);
+  console.log("hunch: ", charList.length);
+  c1 = Math.floor(Math.random() * total);
+  do {
+    c2 = Math.floor(Math.random() * total);
+  } while (c1 == c2);
+
+  do {
+    do {
+      c3 = Math.floor(Math.random() * total);
+    } while (c2 == c3);
+  } while (c1 == c3);
+
+  toWrite = p.concat('', charList.d[c1], ', ', charList.d[c2], ', and ', charList.d[c3], '!</h3>');
+
+  document.getElementById("characters").innerHTML = toWrite;
+}
 
 
 function addChar() {
