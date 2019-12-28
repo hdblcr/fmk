@@ -16,7 +16,7 @@ class ShipList {
     this.length = this.d.length;
     this.ary = this.d;
     // this.id = sls.length;
-    // shipLists.add(this);
+    // sdddhipLists.add(this);
   }
   rmEmpty() {
     var i = 0;

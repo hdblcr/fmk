@@ -4,7 +4,7 @@ var sls = new Array();
 console.log("ive been called!!");
 
 
-// ============================== class =====================================
+// ============================== class ========+============================
 
 class ShipList {
   constructor(arrayFromFile) {
